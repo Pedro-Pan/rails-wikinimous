@@ -1,0 +1,11 @@
+<h2 class="border-bottom pb-3 mb-3">
+  <%= @article.title %>
+  <%= link_to icon('far', 'edit'), edit_article_path(@article)  %>
+  <%= link_to icon('far', 'trash-alt'),
+              article_path(@article),
+              method: :delete,
+              data: { confirm: "Are you sure?"} %>
+</h2>
+<p><%= @article.content %></p> </br>
+
+<%= link_to "Back to list", articles_path %>
